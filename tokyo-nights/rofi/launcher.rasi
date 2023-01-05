@@ -1,0 +1,176 @@
+/**
+ *
+ * Author : Aditya Shakya (adi1090x)
+ * Github : @adi1090x
+ * 
+ * Rofi Theme File
+ * Rofi Version: 1.7.3
+ **/
+ 
+ * {
+    font:                        "JetBrains Mono Nerd Font 10";
+    background:                  #1a1b26;
+    background-alt:              #2d2f42;
+    foreground:                  #a9b1d6;
+    selected:                    #f7768e;
+    active:                      #1a1b26;
+    urgent:                      #1a1b26;
+}
+
+/*****----- Configuration -----*****/
+configuration {
+	modi:                       "drun";
+    show-icons:                 true;
+    display-drun:               "";
+    display-run:                "";
+    display-filebrowser:        "";
+    display-window:             "";
+	drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
+	window-format:              "{w}   {c}   {t}";
+}
+
+/*****----- Global Properties -----*****/
+
+
+/*****----- Main Window -----*****/
+window {
+    /* properties for window widget */
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       800px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+
+    /* properties for all widgets */
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     0px;
+    border-radius:               20px;
+    border-color:               white;
+    cursor:                      "default";
+    background-color:            black;
+    background-image:            url("~/.config/openbox-themes/themes/tokyo-nights/w.png", width);
+    border-radius:               20px;
+    border-color:               white;
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     20px;
+    padding:                     40px;
+    background-color:            transparent;
+    children:                    [ "inputbar", "listview" ];
+    border-radius:               20px;
+    border-color:               white;
+}
+
+/*****----- Inputbar -----*****/
+inputbar {
+    enabled:                     true;
+    spacing:                     0px;
+    margin:                      0px 200px 0px 0px;
+    padding:                     25px;
+    border:                      2px;
+    border-radius:               20px;
+    border-color:                white;
+    background-image:            url("~/.config/openbox-themes/themes/tokyo-nights/w.png", none);
+    children:                    [ "textbox-prompt-colon", "entry" ];
+}
+
+textbox-prompt-colon {
+    enabled:                     true;
+    expand:                      false;
+    padding:                     8px 11px;
+    border-radius:               8px;
+    background-color:            white;
+    text-color:                  black;
+    str:                         "";
+}
+entry {
+    enabled:                     true;
+    padding:                     8px 12px;
+    border:                      0px;
+    background-color:            transparent;
+    text-color:                  white;
+    cursor:                      text;
+    placeholder:                 "Search...";
+    placeholder-color:           inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       8;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     10px;
+    margin:                      0px 200px 0px 0px;
+    padding:                     10px;
+    border:                      2px;
+    border-radius:               20px;
+    border-color:                white;
+    background-color:            black;
+    cursor:                      "default";
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     5px 10px;
+    border:                      0px;
+    border-radius:               18px;
+    border-color:                white;
+    background-color:            transparent;
+    text-color:                  white;
+    cursor:                      pointer;
+}
+element selected.normal {
+    background-color:            @selected;
+    text-color:                  black;
+}
+element-icon {
+    background-color:            transparent;
+    size:                        32px;
+    cursor:                      inherit;
+}
+element-text {
+    background-color:            inherit;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+
+/*****----- Message -----*****/
+error-message {
+    padding:                     20px;
+    background-color:            transparent;
+    text-color:                  white;
+}
+message {
+    padding:                     0px;
+    background-color:            inherit;
+    text-color:                  #FF9030;
+}
+textbox {
+    padding:                     0px;
+    border-radius:               0px;
+    background-color:            inherit;
+    text-color:                  inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
